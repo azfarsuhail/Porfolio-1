@@ -6,10 +6,10 @@ import Footer from './Footer/page';
 
 interface LayoutProps {
   children: ReactNode;
-  metadata: Metadata; // Include metadata as a prop
+  metadata: Metadata;
 }
 
-const fontSans = Inter();
+const fontSans = Inter({ subsets: ['latin'] }); // Specify subsets here
 
 const Layout = ({ children, metadata }: LayoutProps) => {
   return (
