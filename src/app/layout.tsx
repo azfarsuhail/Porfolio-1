@@ -1,3 +1,5 @@
+// src/app/layout.tsx
+
 import React, { ReactNode } from 'react';
 import { Metadata } from 'next';
 import { Inter } from 'next/font/google';
@@ -9,9 +11,9 @@ interface LayoutProps {
   metadata: Metadata;
 }
 
-const fontSans = Inter({ subsets: ['latin'] }); // Specify subsets here
+const fontSans = Inter({ subsets: ['latin'] });
 
-const Layout = ({ children, metadata }: LayoutProps) => {
+const Layout: React.FC<LayoutProps> = ({ children, metadata }) => {
   return (
     <>
       <html lang="en" className="flex-col">
